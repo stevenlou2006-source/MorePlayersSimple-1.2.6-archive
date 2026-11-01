@@ -44,7 +44,7 @@ run this work, **unmodified**, inside the game "R.E.P.O." only.
 
 **② GPL 版本（1.2.6 及更早）**
 
-1.2.6 及更早版本以 **GNU GPL-3.0** 发布，其授权**不可撤销**，使用者享有以下权利：
+本项目 **1.2.6 及其之前的各个版本**均以 **GNU GPL-3.0** 授权发布；该授权**不因作者此后变更条款而失效**（被许可人违约时依 **GPL-3.0 第 8 条**可终止），使用者享有以下权利：
 
 1. **运行** —— 可用于任何目的（含商业用途）；
 2. **修改** —— 可自由修改、改编；
@@ -116,15 +116,19 @@ run this work, **unmodified**, inside the game "R.E.P.O." only.
 
 **（一）自动保护与保护期限**
 本作品自创作完成之日起**自动**受版权保护，无需登记或任何手续。
-作为计算机程序，保护期不少于**作者终生加死后 50 年**；
-依中国法，法人作品的保护期为**首次发表后 50 年**（以现行法为准）。
+作为计算机程序，依中国《著作权法》：
+**自然人作品**的保护期为**作者终生加死后 50 年**；
+**法人或非法人组织作品**的保护期为**首次发表后 50 年**
+（未发表的不予保护）。其他国家的保护期以其国内法为准。
 
 **（二）国际条约**（对各条约**缔约方**有效；中国、美国、欧盟均为缔约方）
 
 1. **《伯尔尼保护文学和艺术作品公约》**（Berne Convention）
    - **国民待遇**：作为缔约方国民，本作品在其他缔约方享有与当地国民同等的保护。
-   - **保护客体**：计算机程序（无论**源代码或目标代码**形式）作为“**文字作品**”受保护。
    - **专有权利**：复制权、发行权、公开传播权等；未经许可复制或分发即构成侵权。
+   - 说明：伯尔尼公约 1971 年巴黎文本**未直接列出计算机程序**；
+     “计算机程序按文字作品保护”这一规则是由 **WCT 第 4 条**
+     （伯尔尼公约的特别协议）与 **TRIPS 第 10 条第 1 款**予以明确的。
 
 2. **《与贸易有关的知识产权协定》**（TRIPS，WTO 框架）
    - 对全部 **WTO 成员**具约束力，设定**最低保护标准**，
@@ -166,10 +170,13 @@ run this work, **unmodified**, inside the game "R.E.P.O." only.
 可能承担刑事责任。
 
 > **说明**：本条款旨在明确作者的授权边界，**不排除法律强制赋予的权利**。
-> 例如：《计算机软件保护条例》**第十七条**允许“为了学习和研究软件内含的设计思想和原理”
-> 而进行必要的复制；欧盟 **2009/24/EC 第 6 条**允许“为互操作性”的有限反编译。
-> 对 **1.2.6 及更早的 GPL-3.0 版本**，其授权以 **GPL 条款为准且不可撤销**，
-> 本条款中的禁止性规定不适用于这些版本。
+> 例如：《计算机软件保护条例》**第十七条**规定——“为了学习和研究软件内含的设计思想和原理，
+> 通过安装、显示、传输或者存储等方式**使用**软件的，可以不经软件著作权人许可，
+> 不向其支付报酬”（该条针对的是**使用**行为，复制、发行等仍受限制）；
+> 欧盟 **2009/24/EC 第 6 条**允许“为互操作性”的有限反编译。
+> 对本项目 **1.2.6 及其之前的各个版本**（均以 **GPL-3.0** 授权发布）：
+> 其授权**不因作者此后变更条款而失效**；但被许可人违反 GPL-3.0 时，
+> 授权可依 **GPL-3.0 第 8 条**终止。本条款中的禁止性规定不适用于这些版本。
 
 ---
 
@@ -257,16 +264,18 @@ loss arising from use of, or inability to use, this mod.
 ### 10. Legal basis and consequences
 
 **(a) Automatic protection and term** — protected from the moment of creation, with
-no formality required. As a computer program the term is at least the author's life
-plus **50 years**; under PRC law, works of a legal person are protected for **50
-years from first publication** (as the law currently stands).
+no formality required. Under the PRC Copyright Law: for a **natural person** the term
+is the author's life plus **50 years**; for a **work of a legal person** it is **50
+years from first publication**. Other jurisdictions apply their own terms.
 
 **(b) International treaties** (binding on the **parties** to each treaty; China,
 the United States and the EU are parties)
 
-1. **Berne Convention** — national treatment; computer programs (source **or object
-   code**) protected as **literary works**; exclusive rights of reproduction,
-   distribution and communication to the public.
+1. **Berne Convention** — national treatment; exclusive rights of reproduction,
+   distribution and communication to the public. Note: the 1971 Paris Act does **not**
+   itself mention computer programs; the rule that programs are protected as
+   **literary works** is set out in **WCT Article 4** (a special agreement under
+   Berne) and **TRIPS Article 10(1)**.
 2. **TRIPS Agreement (WTO)** — minimum standards binding on all WTO members,
    enforceable through the **WTO dispute settlement mechanism** (an
    **inter-State** process; platform liability and cross-border content handling are
@@ -296,9 +305,13 @@ wilful commercial infringement may carry criminal liability.
 
 > **Note**: this notice does not exclude rights granted by mandatory law — e.g.
 > **Article 17 of the Regulations on Computer Software Protection of the PRC**
-> permits necessary copying to study a program's ideas, and **EU Directive
-> 2009/24/EC, Article 6** permits limited decompilation for interoperability. For
-> **1.2.6 and earlier (GPL-3.0)** the GPL governs and is irrevocable.
+> permits **using** a program (by installing, displaying, transmitting or storing)
+> to study its ideas, without the rightsholder's permission; copying and
+> distribution remain restricted. **EU Directive 2009/24/EC, Article 6** permits
+> limited decompilation for interoperability. For **versions 1.2.6 and earlier**
+> (released under **GPL-3.0**), the grant is **not** withdrawn by later changes to
+> these terms, but it **may be terminated under GPL-3.0 §8** if a licensee breaches
+> the licence. The prohibitions above do not apply to those versions.
 
 ---
 
