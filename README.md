@@ -1,3 +1,6 @@
+> 🔗 仓库地址（Repository）：https://github.com/stevenlou2006-source/MorePlayersSimple-1.2.6-archive
+> 📦 1.2.6 及更早版本的源码归档（GNU GPL-3.0）；1.2.7 起为闭源。
+
 # MorePlayersSimple（更多玩家精简版）
 
 ## 📜 版权声明与使用条款（完整版）
