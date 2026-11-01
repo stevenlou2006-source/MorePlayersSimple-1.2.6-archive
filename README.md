@@ -115,33 +115,36 @@ run this work, **unmodified**, inside the game "R.E.P.O." only.
 ### 十、法律依据与后果
 
 **（一）自动保护与保护期限**
-本作品自创作完成之日起**自动**受版权保护，无需登记或任何手续；作为计算机程序，
-保护期不少于**作者终生加死后 50 年**（多数成员国为 70 年）。
+本作品自创作完成之日起**自动**受版权保护，无需登记或任何手续。
+作为计算机程序，保护期不少于**作者终生加死后 50 年**；
+依中国法，法人作品的保护期为**首次发表后 50 年**（以现行法为准）。
 
-**（二）国际条约（对所有成员国有效）**
+**（二）国际条约**（对各条约**缔约方**有效；中国、美国、欧盟均为缔约方）
 
-1. **《伯尔尼保护文学和艺术作品公约》**（Berne Convention）—— 版权基石
-   - **国民待遇**：作为成员国国民，本作品在所有其他成员国享有与当地国民同等的保护。
+1. **《伯尔尼保护文学和艺术作品公约》**（Berne Convention）
+   - **国民待遇**：作为缔约方国民，本作品在其他缔约方享有与当地国民同等的保护。
    - **保护客体**：计算机程序（无论**源代码或目标代码**形式）作为“**文字作品**”受保护。
    - **专有权利**：复制权、发行权、公开传播权等；未经许可复制或分发即构成侵权。
 
-2. **《与贸易有关的知识产权协定》**（TRIPS，WTO 框架）—— 带执法机制
-   - 对全部 **WTO 成员**具约束力，设定**最低保护标准**，并与**国际贸易挂钩**，
-     可影响侵权内容的跨境流通与平台责任。
+2. **《与贸易有关的知识产权协定》**（TRIPS，WTO 框架）
+   - 对全部 **WTO 成员**具约束力，设定**最低保护标准**，
+     并可通过 **WTO 争端解决机制**保障执行（该机制为**国家间**程序；
+     平台责任与跨境内容处置由**各成员国内法**规定）。
    - 再次确认计算机程序按《伯尔尼公约》作为文字作品保护。
    - **表达与思想的界限（第 9 条第 2 款）**：版权保护的是**代码的表达**，
      不保护思想、程序、操作方法或数学概念本身 —— 他人可以学习设计思路，
      但**不得复制代码的表达**。
    - 要求成员建立**有效执法程序**，权利人可据此制止侵权。
 
-3. **《世界知识产权组织版权条约》**（WCT）—— 数字环境专项保护
+3. **《世界知识产权组织版权条约》**（WCT）
    - 明确计算机程序（含 **DLL 等目标代码形态**）作为《伯尔尼公约》第 2 条项下的
      文字作品受保护，**不论其表达方式或形式**。
    - **发行权**：授权通过销售或转让方式向公众提供作品复制品。
    - **向公众传播权**：授权以有线或无线方式向公众传播作品
      （含通过互联网提供，使公众可在其选定的地点和时间获取）。
-   - **技术措施保护（第 11 条）**：缔约国须立法禁止**规避**权利人为保护作品
-     而使用的有效技术措施（如加密、混淆、完整性校验）—— **破解行为本身即可被追究**。
+   - **技术措施保护（第 11 条）**：缔约方须立法禁止规避权利人为保护作品
+     而使用的**有效技术措施**；各法域通常设有法定例外
+     （如互操作性、安全研究、加密研究），具体适用**以该国国内法为准**。
 
 4. **欧盟《计算机程序保护指令》**（2009/24/EC）
    - 在欧盟境内将软件作为文学作品保护，禁止未经授权的复制与发行；
@@ -150,10 +153,15 @@ run this work, **unmodified**, inside the game "R.E.P.O." only.
 **（三）国内法**
 《中华人民共和国著作权法》《计算机软件保护条例》，
 以及《中华人民共和国刑法》第二百一十七条（侵犯著作权罪）。
+其中**技术措施**相关保护见《著作权法》相关规定（2020 年修订；**具体条号以现行法为准**）。
 
-**（四）后果**
+**（四）如何适用**
+⚠️ 上述条约通过各**缔约国国内法**实施；**实际维权以该国国内法及法院管辖为准**。
+本声明引用条约，用于说明本作品在国际层面的保护依据。
+
+**（五）后果**
 对上述禁止行为的实施者，**作者 cn_xc** 有权依据
-《中华人民共和国著作权法》第五十二条、第五十三条及《计算机软件保护条例》
+《中华人民共和国著作权法》《计算机软件保护条例》
 要求**停止侵害、消除影响、赔偿损失**；情节严重、以营利为目的的，
 可能承担刑事责任。
 
@@ -248,38 +256,49 @@ loss arising from use of, or inability to use, this mod.
 
 ### 10. Legal basis and consequences
 
-**(a) Automatic protection and term** — protected from the moment of creation, no
-formality required; as a computer program the term is at least the author's life
-plus **50 years** (70 in many member states).
+**(a) Automatic protection and term** — protected from the moment of creation, with
+no formality required. As a computer program the term is at least the author's life
+plus **50 years**; under PRC law, works of a legal person are protected for **50
+years from first publication** (as the law currently stands).
 
-**(b) International treaties (binding on all member states)**
+**(b) International treaties** (binding on the **parties** to each treaty; China,
+the United States and the EU are parties)
 
 1. **Berne Convention** — national treatment; computer programs (source **or object
-   code**) are protected as **literary works**; exclusive rights of reproduction,
+   code**) protected as **literary works**; exclusive rights of reproduction,
    distribution and communication to the public.
-2. **TRIPS Agreement (WTO)** — minimum standards binding on all WTO members and
-   linked to international trade; confirms programs are literary works. **Article
-   9(2)**: copyright protects **expression, not ideas**, procedures, methods or
-   mathematical concepts. Members must provide effective enforcement procedures.
-3. **WIPO Copyright Treaty (WCT)** — digital-environment protection; programs,
-   **including DLL/object-code form**, are literary works under Berne Art. 2. Grants
-   a **right of distribution** and a **right of communication to the public**
-   (including online); **Article 11** requires parties to prohibit **circumvention of
-   effective technological measures** — cracking the work is itself actionable.
-4. **EU Directive 2009/24/EC** — EU software protection; Article 6 permits limited
-   decompilation for interoperability, which this notice does not exclude.
+2. **TRIPS Agreement (WTO)** — minimum standards binding on all WTO members,
+   enforceable through the **WTO dispute settlement mechanism** (an
+   **inter-State** process; platform liability and cross-border content handling are
+   governed by **domestic law**). **Article 9(2)**: copyright protects
+   **expression, not ideas**, procedures, methods or mathematical concepts.
+3. **WIPO Copyright Treaty (WCT)** — programs, **including DLL/object-code form**,
+   are literary works under Berne Art. 2. Grants a **right of distribution** and a
+   **right of communication to the public** (including online). **Article 11**
+   requires parties to prohibit circumvention of **effective technological
+   measures**; most jurisdictions provide statutory exceptions (interoperability,
+   security research, cryptography research) — applicability is **governed by
+   domestic law**.
+4. **EU Directive 2009/24/EC** — software protected as a literary work in the EU;
+   Article 6 permits limited decompilation for interoperability, which this notice
+   does not exclude.
 
 **(c) Domestic law** — Copyright Law of the PRC, Regulations on Computer Software
-Protection, Article 217 of the Criminal Law of the PRC.
+Protection, Article 217 of the Criminal Law of the PRC. Technological-measure
+protection is addressed in the Copyright Law (as amended in 2020; **check the
+current article numbering**).
 
-**(d) Consequences** — injunctive relief, removal of infringing copies and damages;
+**(d) How this applies** — These treaties are implemented through **domestic law**;
+**enforcement is governed by the law and courts of the relevant jurisdiction**.
+
+**(e) Consequences** — injunctive relief, removal of infringing copies and damages;
 wilful commercial infringement may carry criminal liability.
 
 > **Note**: this notice does not exclude rights granted by mandatory law — e.g.
-> **Article 17 of the Regulations on Computer Software Protection of the PRC** permits
-> necessary copying to study a program's ideas, and **EU Directive 2009/24/EC,
-> Article 6** permits limited decompilation for interoperability. For **1.2.6 and
-> earlier (GPL-3.0)** the GPL governs and is irrevocable.
+> **Article 17 of the Regulations on Computer Software Protection of the PRC**
+> permits necessary copying to study a program's ideas, and **EU Directive
+> 2009/24/EC, Article 6** permits limited decompilation for interoperability. For
+> **1.2.6 and earlier (GPL-3.0)** the GPL governs and is irrevocable.
 
 ---
 
