@@ -1,0 +1,262 @@
+## [1.2.6]
+
+- README 新增「关于多人语音」说明：语音房间上限跟随房间上限（公开 20 / 私人 10），
+  但游戏语音混音按 6 人设计，人多时容易出现听不到 / 音量异常，建议 6~8 人用游戏内语音、
+  更多人改用外部语音。本模组**不限制**语音人数（限制会导致"能进游戏但没声音"，更难排查）。
+
+### 调整
+- **配置项名称全部改为中文**（节名 `[常规]`，键名 `公开房人数上限` / `私人房人数上限`）。
+  旧 cfg 里的英文键会被忽略，设置会回到默认值。
+- **私人房间上限的可调范围放宽到 1~10**（配置项 `MaxPlayersPrivate`，**默认值仍为 6 = 游戏原版**，想开更多人请自行调到 10）。
+  ⚠️ 注意：游戏原版私人房上限是 6，超过 6 人时部分原版流程仍按 6 人处理，
+  **不保证第 6 人之后能稳定加入**（详见 README 的「关于私人房间」一节）。
+- 日志里的版本号同步更新为 1.2.6。
+
+
+### 修复
+- **新版游戏（Unity 6 / 2026-10-29 之后）Steam 大厅人数上限设置失效**：
+  新版 Facepunch.Steamworks 把 `Lobby.MaxMembers` 从**字段**改成了**属性**
+  （`get_MaxMembers` / `set_MaxMembers`），旧版代码用 `GetField("maxMembers")` 取不到，
+  于是这次设置被静默跳过 —— Photon 房间上限仍是 20，但 Steam 大厅上限没被改。
+- 现在改为三级回退：**属性 `MaxMembers` → 字段 `MaxMembers`/`maxMembers` → `SetLobbyMemberLimit`**，
+  并在日志里写明用了哪条路径：
+  `[MorePlayers] Steam 大厅人数上限已设为 20（属性 MaxMembers）`
+- 若三条路都不可用，会明确告警：
+  `[MorePlayers] 未能设置 Steam 大厅人数上限：当前版本的 Lobby 类型里没有 MaxMembers 属性/字段。`
+
+### 审查结论（本版已对新版程序集逐项核对）
+- `Photon.Realtime.LoadBalancingClient.OpCreateRoom` / `OpJoinOrCreateRoom`：**存在** ✓
+- `RoomOptions.MaxPlayers`（字段）：**存在** ✓
+- `SteamLobbyManager.HostLobby(Boolean)`、`currentLobby`、`privateLobby`：**存在** ✓
+- `MenuPageServerList.CreateServerElement(...)`：**存在** ✓
+- 本模组不会出现"中途加入"那种崩溃（不清缓存、不销毁对象、不跳过原方法）✓
+
+# 更新日志
+
+## [1.2.5] - 2026-10-29
+
+### 修复
+- **适配游戏大更新（牛仔地图版本）**：游戏把 Steam 大厅相关成员从 `SteamManager` 迁移到了新类 `SteamLobbyManager`，
+  且 `SteamManager` 变成了静态类。原补丁 `[HarmonyPatch(typeof(SteamManager), "HostLobby")]` 因为找不到目标方法而**整段失效**
+  （日志：`AccessTools.DeclaredMethod: Could not find method for type SteamManager and name HostLobby`）。
+  现在改为补丁 `SteamLobbyManager.HostLobby`，并同样从 `SteamLobbyManager.currentLobby` 读取大厅对象。
+- 若这次修补丁仍然失败，模组其余功能（`MaxPlayers` 上限修改）不受影响。
+
+
+
+### 适配游戏引擎换代（Unity 6）
+- 这次更新把游戏从 **Unity 2022.3** 升到了 **Unity 6（6000.3.17f1）**，属于引擎大版本升级。
+  `Assembly-CSharp` / `UnityEngine.*` / Photon 等程序集全部重写，旧构建的模组会因为找不到方法而报 `MissingMethodException`。
+- 本模组已用**新版引擎程序集重新编译**，并用新版 `Assembly-CSharp` 校验补丁目标：
+  `SteamLobbyManager.HostLobby` 存在，补丁可正常挂载。
+- 说明：本模组自身只依赖 `Assembly-CSharp`（不直接用 UnityEngine），所以重编译后行为与之前一致。
+
+## [1.2.4]
+
+- 该版本未保留详细变更记录（历史版本）。
+- 据发布时间判断，属于 2026-10-29 游戏大更新（Unity 6）之前的最后一版；
+  之后的 1.2.5 才开始适配 `SteamLobbyManager`。
+
+## [1.2.3] - 2026-10-18
+
+### 变更
+
+* 版本号统一为 1.2.3：此前 `manifest.json` / README 写的是 1.2.2，而源码与 DLL 内嵌仍是 1.2.0
+* README：中途加入推荐改指 LateJoinSimple，并注明 LateJoinNow 与 LateJoinSimple **不可同装**
+* README：已知冲突补充 **LateJoinPlus / RepoLateJoin**（它们自带人数上限功能，会与本模组互相覆盖）
+* README：修正配置文件名（`dyxc666.MorePlayersSimple.cfg`）与一处错字
+* README / manifest：补充 **GitHub 仓库链接**（manifest 的 `website_url` 也指向仓库）
+
+### 说明
+
+* 本版**无功能改动**，仅为版本号与文档修正
+
+
+## \[1.2.2] - 2026-08-06
+
+### 修复
+
+* 修复语音子房间（`\_voice\_`）的 `MaxPlayers` 未被同步的问题，现在语音房间上限会随公开房间上限（20）一起设置，日志中标注 `\[VOICE]` 以便确认
+* 注意：此修改仅将客户端参数设大，如果Photon Voice 为免费套餐，服务端可能仍限制约 5-6 人同时说话，此为官方限制，非模组 bug
+
+## \[1.2.1] - 2026-06-17
+
+### 文本描述更新
+
+\-修改了一些描述错误的README和manifest.json。
+
+## \[1.2.0] - 2026-06-17
+
+### 回退
+
+* 回退至极简版本，仅保留房间人数上限修改功能
+* 移除所有可能导致bug的实验性功能（TTL修改、回调接口、Disconnect补丁等）
+
+### 变更
+
+* 版本号跳至 1.2.0，表明这是一次重大简化
+* 从此版本起，功能性更新和重大bug修复将以单独补丁形式发布，主模组保持稳定
+
+## \[1.1.6] - 2026-06-17
+
+### 修复
+
+* 修复玩家退出后关卡切换无限卡加载的问题（百分之百复现）。根本原因：有人退出后，房间 `MaxPlayers` 仍为开房时设置的高上限值，但实际在线人数已减少。Photon 底层在加载新场景时一直等待不存在的玩家，导致全员卡死。
+* 修复方案：新增 `DynamicMaxPlayers` 配置项，玩家退出时自动将房间上限调整为当前实际在线人数。
+
+### 新增
+
+* 自动检测 LateJoinNow：如果同时安装了 LateJoinNow，自动关闭 `DynamicMaxPlayers`，避免两个模组对房间上限的修改互相冲突。用户无需手动配置。
+
+### 变更
+
+* 私人房间最大玩家数范围调整为 1-6，默认值恢复为 6
+
+## \[1.1.5] - 2026-06-07
+
+### 变更
+
+* 修正 `OpCreateRoom` 和 `OpJoinOrCreateRoom` 的 `PlayerTtl` / `EmptyRoomTtl` 从 0 改为 -1（永不过期），支持 LateJoinNow 中途加入
+
+## \[1.1.4] - 2026-05-25
+
+### 适配
+
+* 适配游戏 v0.4.3
+
+## \[1.1.3] - 2026-05-20
+
+### 移除
+
+* 移除 `OnConnectedToMasterPatch`，消除 `maxPlayersPhoton` 字段缺失的警告。经 dnSpy 逆向确认，游戏 `OnConnectedToMaster` 中已不再使用该字段，Patch 已无实际作用。
+
+## \[1.1.2] - 2026-05-15
+
+### 文档
+
+* 修正文本说明。
+
+## \[1.1.1] - 2026-05-13
+
+### 新增
+
+* 公开房间和私人房间的最大玩家数分开配置。
+
+  * `MaxPlayersPublic`：公开房间最大玩家数（1-20，默认 20）。
+  * `MaxPlayersPrivate`：私人房间最大玩家数（1-20，默认 6）。
+* 创建房间时根据房间类型自动选择对应配置值。
+* 日志标明 `PUBLIC` 或 `PRIVATE`，方便调试。
+
+### 修复
+
+* 修复 `NetworkConnect.instance` 编译错误。
+
+## \[1.0.15] - 2026-05-12
+
+### 新增
+
+* 新增 `OnConnectedToMasterPatch`，覆盖快速加入路径的默认 6 人上限。
+* `HostLobbyPatch` 增加 `MaxMembers` 字段备选设置逻辑。
+
+## \[1.0.14] - 2026-05-12
+
+### 适配
+
+* 适配游戏 v0.4.3
+
+## \[1.0.13] - 2026-05-10
+
+### 文档
+
+* 更新readme。
+
+## \[1.0.12] - 2026-05-09
+
+### 文档
+
+* 更新封面图片。
+
+## \[1.0.11] - 2026-05-08
+
+### 文档
+
+* 修正文本说明。
+
+
+
+## \[1.0.10] - 2026-05-08
+
+### 文档
+
+* 修正文本说明。
+
+## \[1.0.9] - 2026-05-07
+
+### 修复
+
+* 适配游戏 v0.4.0（Cosmetics Update）。
+* 修复房间列表 UI 显示的玩家上限：在 `MenuPageServerList.CreateServerElement` 增加补丁，修正自己创建的房间的显示上限。
+* 通过 `SelfCreatedRoomName` 精确匹配自己的房间，不影响其他房间的显示。
+
+## \[1.0.8] - 2026-05-05
+
+### 精简
+
+* 移除 `NetworkConnect.OnConnectedToMaster` 补丁，消除与底层 Photon 补丁的潜在冲突。
+* 仅保留核心的 Photon 底层补丁和 Steam 大厅补丁，提高稳定性。
+
+### 保留
+
+* `OpCreateRoom` / `OpJoinOrCreateRoom` 补丁：覆盖所有房间创建路径。
+* `SteamManager.HostLobby` 补丁：保障 Steam 好友直接加入。
+
+## \[1.0.7] - 2026-05-04
+
+### 修复
+
+* 修复 Steam 好友无法通过好友列表加入超过 6 人房间的问题。
+* 新增对 `NetworkConnect.OnConnectedToMaster` 的补丁，覆盖快速加入路径中的硬编码人数上限。
+* 新增对 `SteamManager.HostLobby` 的补丁，同步修改 Steam 大厅成员上限。
+
+## \[1.0.6] - 2026-05-03
+
+### 文档
+
+* 调整 README 冲突说明，提醒与修改房间加入逻辑的模组均可能冲突。
+
+## \[1.0.5] - 2026-05-02
+
+### 文档
+
+* 修正文本说明。
+
+## \[1.0.4] - 2026-05-02
+
+### 文档
+
+* README 添加 QQ 群信息。
+
+## \[1.0.3] - 2026-04-24
+
+### 文档
+
+* 修正 manifest.json 中的表述。
+
+## \[1.0.2] - 2026-04-24
+
+### 文档
+
+* 修正 README 中的表述。
+
+## \[1.0.1] - 2026-04-17
+
+### 修复
+
+* 修正先前版本在房间创建后才修改 MaxPlayers 导致无效的问题。
+* 改用 Harmony 前缀拦截 Photon 底层 `OpCreateRoom` 和 `OpJoinOrCreateRoom`，在 RoomOptions 阶段正确设置上限。
+
+## \[1.0.0] - 2026-04-16
+
+* 初始版本发布。
+* 支持自定义房间最大玩家数，突破游戏默认 6 人上限。
+
