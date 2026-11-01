@@ -1,50 +1,92 @@
 # MorePlayersSimple（更多玩家精简版）
 
-## 📜 版权声明与使用条款
+## 📜 版权声明与使用条款（完整版）
 
 > Copyright (C) 2026 cn_xc. All rights reserved. / 版权所有，保留一切权利。
+> 本声明同时适用于本项目的**源代码、二进制文件、文档、字符串资源与美术资源**。
 
 ### 一、作品来源
 
 本项目**并非衍生作品**，与《LateJoinNow》等其它模组**没有任何代码或授权关系**：
 
 - **本作品**：**MorePlayersSimple（更多玩家精简版）**，由 **cn_xc** 独立开发与维护。
-- 本项目所使用的第三方组件仅为运行所需的基础库（**BepInEx**、**Harmony**、
-  Photon 相关库），均按其各自的许可证使用。
-- 本声明的范围**覆盖本仓库中的全部源代码**（1.2.6 及更早版本）。
+- 所使用的第三方组件仅为运行所需的基础库（**BepInEx**、**Harmony**、Photon 相关库），
+  均按其各自的许可证使用，不改变本作品自身的著作权归属。
+- 本声明的范围覆盖**本项目的全部成果**（代码、二进制、文档、字符串、图标等）。
 
 ### 二、授权范围（按版本区分）
 
 | 版本 | 许可证 | 授权内容 |
 |---|---|---|
-| **1.2.6 及更早** | **GNU GPL-3.0**（见本仓库 `LICENSE`） | 依 GPL-3.0 条款使用、修改与分发 |
+| **1.2.6 及更早** | **GNU GPL-3.0**（源码见归档仓库 `MorePlayersSimple-1.2.6-archive`） | 依 GPL-3.0 条款使用、修改与分发 |
 | **1.2.7 及之后** | **闭源**（不提供源代码） | 仅授权在 **R.E.P.O.（REPO）游戏内以未经修改的形式运行** |
 
 Licence granted for 1.2.7+: a limited, non-exclusive, non-transferable licence to
 run this work, **unmodified**, inside the game "R.E.P.O." only.
 
-### 三、无论哪个版本，都必须注明出处
+### 三、必须注明出处（对所有版本生效）
 
-> ⚠️ **即使是 GPL-3.0 版本，也必须在显著位置注明出处。**
+> ⚠️ **无论是 GPL-3.0 版本还是闭源版本，分发、整合、引用、介绍时都必须在显著位置注明作者与出处。**
 >
-> - 分发、整合、修改、二次打包 **1.2.6 及更早版本**时，必须保留
->   **作者署名（cn_xc）**与**本仓库地址**：
->   `https://github.com/stevenlou2006-source/MorePlayersSimple-1.2.6-archive`
-> - 在整合包、视频简介、发布页等场合引用本模组时，同样需要写明出处与作者。
-> - GPL-3.0 授予的是**代码层面**的使用、修改与分发自由，**不免除**署名与出处标注义务；
->   移除或篡改版权标识属于违反授权。
+> - 必须保留 **作者署名（cn_xc）**；
+> - 必须写明出处（Thunderstore 页面或 GitHub 仓库地址）；
+> - **移除、遮盖、篡改版权标识或作者信息，均视为违反本授权。**
 
-### 四、未经书面许可明确禁止（适用于 1.2.7 及之后）
+### 四、未经书面许可明确禁止（1.2.7 及之后）
 
-1. **反编译、反汇编、逆向工程、脱壳**，或提取实现逻辑；
-2. **复制、改编、翻译、演绎**，或基于本作品创作衍生作品；
-3. **二次打包、重新分发、上架第三方平台**，或用于**商业用途**；
-4. 移除或篡改版权标识、作者署名与本条款。
+1. **反编译、反汇编、逆向工程、脱壳、内存转储**，或以任何方式**提取实现逻辑**；
+2. **复制、改编、翻译、演绎**，或基于本作品创作衍生作品（含“换皮改名”后发布）；
+3. **二次打包、重新分发、上架第三方平台**，或用于任何**商业用途**（含付费整合、付费代装）；
+4. 移除或篡改版权标识、作者署名与本条款；
+5. 通过反射、钩子、补丁等方式调用本作品内部实现，用于构建替代品或商业产品。
 
-如需**查看 1.2.7+ 代码细节**、**加入整合包**或以其它非“原样运行”方式使用，
-请先联系作者申请授权；**获准后仍须标明出处**。
+### 五、人工智能（AI）相关限制 —— 重要
 
-### 五、法律依据与后果
+未经作者**书面许可**，明确禁止下列**人工智能相关**行为：
+
+1. **训练用途**：禁止将本项目的源代码、字符串、文档、注释或任何部分，
+   用于**训练、微调、蒸馏、评测**任何机器学习模型（含大语言模型、代码生成模型，
+   以及以此构建的数据集），无论该行为发生在本地、私有集群还是云端服务。
+2. **生成式还原**：禁止将本项目的内容输入 AI 工具（对话模型、代码助手、Agent 等），
+   用以**生成功能等价的实现**，再以“原创”名义发布、分发或用于任何产品。
+3. **AI 批量“换皮”**：禁止借助 AI 改写、重命名、重构本项目的实现后发布，
+   该行为本质上仍是对本作品的复制与改编。
+4. **规避授权**：禁止通过“让 AI 代为阅读/提取/改写”的方式，
+   绕过本条款对反编译与复制改编的限制。
+5. **声明**：AI 生成物**不改变**本作品的著作权归属，**不构成独立创作**；
+   由 AI 辅助产生的、与本作品实质相似的成果，同样受本条款约束。
+
+> 说明：使用 AI 工具**阅读公开文档、撰写评测、翻译说明文字**不受限制；
+> 上述限制针对的是**代码与实现层面的提取、再现与再发布**。
+
+### 六、反规避与身份保护
+
+1. 禁止绕过、破坏或规避本作品的任何授权校验、标识或技术措施；
+2. 禁止以他人名义发布本作品，或伪称获得作者授权、官方合作、官方发行；
+3. 禁止发布经修改的版本却**沿用本项目名称、图标或作者署名**，造成来源混淆。
+
+### 七、需要另行申请授权的情形
+
+- 查看 **1.2.7 及之后版本**的代码细节或进行代码审查；
+- 将本模组加入**整合包（modpack）**，或以任何非“原样运行”的方式使用；
+- 任何形式的**商业用途**（含直播平台付费内容、代装服务、付费整合）。
+
+如需以上授权，请**联系作者申请**；**获准后仍须标明出处**，且授权仅对**书面同意的范围**有效。
+
+### 八、条款变更、可分性与准据法
+
+1. 作者**保留随时更新本条款的权利**；更新后的条款自发布之日起适用于**新版本**，
+   已发布版本的授权不因条款更新而回溯改变。
+2. 本条款任一条款被认定无效或不可执行，**不影响其余条款的效力**。
+3. 本条款的解释与争议适用**中华人民共和国法律**（法律另有强制规定的除外）。
+
+### 九、免责声明
+
+本模组按“现状”提供，不附带任何明示或暗示的担保（含适销性、特定用途适用性）。
+因使用或无法使用本模组导致的任何损失（含存档损坏、联机异常、游戏崩溃、数据丢失等），
+**作者不承担责任**。请在了解风险的前提下自行决定是否使用。
+
+### 十、法律依据与后果
 
 本作品作为计算机程序（按文字作品保护）受以下法律与国际条约保护：
 《中华人民共和国著作权法》《计算机软件保护条例》，
@@ -55,81 +97,93 @@ run this work, **unmodified**, inside the game "R.E.P.O." only.
 要求**停止侵害、消除影响、赔偿损失**；情节严重、以营利为目的的，
 可能依据《中华人民共和国刑法》第二百一十七条（侵犯著作权罪）承担刑事责任。
 
-> **说明**：部分司法辖区（如欧盟 2009/24/EC 指令第 6 条）允许“为互操作性”的
-> 有限反编译。本条款旨在明确作者的授权边界，并不排除法律强制赋予的权利。
-> 此外，1.2.6 及更早版本以 GPL-3.0 发布，其授权不可撤销，相关权利以 GPL 条款为准。
-
-### 六、致谢
-
-- 感谢所有在 QQ 群与反馈中帮助测试的玩家。
+> **说明**：部分司法辖区（如欧盟 2009/24/EC 指令第 6 条）允许“为互操作性”的有限反编译；
+> 对 1.2.6 及更早的 GPL-3.0 版本，其授权以 GPL 条款为准且不可撤销。
+> 本条款旨在明确作者的授权边界，并不排除法律强制赋予的权利。
 
 ---
 
-## 📜 English Version
+## 📜 English Version (full)
 
-### 1. Origin of this work
+> Copyright (C) 2026 cn_xc. All rights reserved.
+
+### 1. Origin
 
 This project is **NOT a derivative work** and has **no code or licensing
-relationship** with *LateJoinNow* or other mods:
-
-- **This work**: *MorePlayersSimple*, independently developed and maintained by
-  **cn_xc**.
-- The only third-party components are the runtime base libraries (**BepInEx**,
-  **Harmony**, Photon libraries), each used under its own licence.
-- These terms cover **all source code in this repository** (1.2.6 and earlier).
+relationship** with *LateJoinNow* or other mods. It is independently developed and
+maintained by **cn_xc**. Third-party components are only the runtime base
+libraries (BepInEx, Harmony, Photon libraries), each under its own licence.
 
 ### 2. Licence granted (by version)
 
 | Version | Licence | Granted |
 |---|---|---|
-| **1.2.6 and earlier** | **GNU GPL-3.0** (see `LICENSE`) | Use, modify and distribute under GPL-3.0 |
-| **1.2.7 and later** | **Closed source** (no source provided) | Run **unmodified** inside "R.E.P.O." only |
+| **1.2.6 and earlier** | **GNU GPL-3.0** (source: archive repository) | Use, modify, distribute under GPL-3.0 |
+| **1.2.7 and later** | **Closed source** | Run **unmodified** inside "R.E.P.O." only |
 
-### 3. Attribution is required for every version
+### 3. Attribution required (all versions)
 
-> ⚠️ **Even for the GPL-3.0 versions, you must credit the author and the source.**
->
-> - When distributing, integrating, modifying or repacking **1.2.6 or earlier**,
->   you must keep the author credit (**cn_xc**) and the repository URL:
->   `https://github.com/stevenlou2006-source/MorePlayersSimple-1.2.6-archive`
-> - When referencing this mod in a modpack, video description or release page,
->   credit the author and the source as well.
-> - GPL-3.0 grants freedom at the **code level**; it does **not** waive attribution.
->   Removing or altering copyright notices is a licence violation.
+**For every version you must credit the author (cn_xc) and the source.** Removing,
+obscuring or altering copyright notices or author information is a licence violation.
 
-### 4. Prohibited without prior written permission (1.2.7 and later)
+### 4. Prohibited without prior written permission (1.2.7+)
 
-1. **Decompiling, disassembling, reverse engineering, unpacking**, or extracting the
-   implementation;
-2. **Copying, adapting, translating or creating derivative works**;
-3. **Repacking, redistributing, publishing on third-party platforms**, or any
-   **commercial** use;
-4. Removing or altering this notice, the author attribution, or any copyright
-   identifier.
+Decompiling / disassembling / reverse engineering / unpacking / memory dumping or
+extracting the implementation; copying, adapting, translating or creating
+derivative works (including renamed "reskins"); repacking, redistributing,
+publishing on third-party platforms or any commercial use; removing or altering
+this notice; calling internal implementations via reflection/hooks/patching to
+build substitutes or commercial products.
 
-Separate permission is required (contact the author; credit the source if granted)
-for reviewing 1.2.7+ code details, including this mod in a modpack, or any use
-other than running it unmodified.
+### 5. Artificial intelligence restrictions — important
 
-### 5. Legal basis and consequences
+Without prior written permission you may **NOT**:
 
-This work is a computer program protected as a literary work under the
-**Berne Convention** and **TRIPS Agreement, Article 10**, as well as the applicable
-domestic law, including the **Copyright Law of the People's Republic of China** and
-the **Regulations on Computer Software Protection**. The rights holder (**cn_xc**)
-may seek **injunctive relief, removal of infringing copies and damages**; wilful
-infringement for commercial advantage may also carry criminal liability under
-**Article 217 of the Criminal Law of the PRC**.
+1. use any part of this project (source, strings, docs, comments) to **train,
+   fine-tune, distil or benchmark** any machine-learning model, including LLMs and
+   code-generation models, or to build datasets for that purpose;
+2. feed this project into AI tools to **generate functionally equivalent
+   implementations** and then publish or distribute them as "original" work;
+3. use AI to rewrite, rename or restructure this project's implementation and
+   publish the result — this remains copying and adaptation;
+4. circumvent these terms by having an AI read, extract or rewrite the work.
 
-> **Note**: some jurisdictions (e.g. **EU Directive 2009/24/EC, Article 6**) permit
-> limited decompilation for interoperability. This notice states the author's
-> licensing boundary and does not exclude rights granted by mandatory law.
-> Versions 1.2.6 and earlier are released under GPL-3.0; those grants are
-> irrevocable and governed by the GPL.
+AI-generated output **does not change** the authorship of this work and does **not**
+constitute independent creation. Using AI to **read public documentation, write
+reviews or translate descriptions** is not restricted; the restrictions target
+extraction, reproduction and redistribution at the code level.
 
-### 6. Credits
+### 6. Anti-circumvention
 
-- Thanks to all players who helped test and report issues.
+No bypassing licence checks or technical measures; no publishing under another
+name or falsely claiming authorisation, partnership or official release; no
+releasing modified versions under this project's name, icon or author credit.
+
+### 7. Separate permission required
+
+Reviewing 1.2.7+ code details; including this mod in a modpack; any commercial use.
+Contact the author; if granted, credit the source, and the permission covers only
+what was granted in writing.
+
+### 8. Changes, severability, governing law
+
+The author may update these terms at any time; updates apply to new versions only.
+Invalidity of one clause does not affect the others. These terms are governed by
+the laws of the People's Republic of China.
+
+### 9. Disclaimer
+
+Provided "as is" without warranty of any kind. The author is not liable for any
+loss arising from use of, or inability to use, this mod.
+
+### 10. Legal basis
+
+Protected as a literary work under the **Berne Convention** and **TRIPS Agreement,
+Article 10**, and under the **Copyright Law of the PRC** and **Regulations on
+Computer Software Protection**. Remedies include injunctive relief, removal of
+infringing copies and damages; wilful commercial infringement may carry criminal
+liability under **Article 217 of the Criminal Law of the PRC**. For versions
+1.2.6 and earlier released under GPL-3.0, the GPL governs and is irrevocable.
 
 ---
 
