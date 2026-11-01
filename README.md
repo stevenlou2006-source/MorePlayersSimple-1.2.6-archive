@@ -1,7 +1,13 @@
 > 🔗 仓库地址（Repository）：https://github.com/stevenlou2006-source/MorePlayersSimple-1.2.6-archive
-> 📦 1.2.6 及更早版本的源码归档（GNU GPL-3.0）；1.2.7 起为闭源。
 
-# MorePlayersSimple（更多玩家精简版）
+# More Players Simple / 更多玩家精简版
+
+突破 REPO 公共房间默认 6 人联机上限，支持 **1–20 人**自定义（私人房间默认 6，可调到 10）。
+
+**当前版本：1.2.7** ｜ 编译于 **Unity 6（6000.3.17f1）** ｜ **仅支持 2026-10-29 之后的游戏版本**
+（旧版游戏请用 v1.2.3；1.2.6 及更早为 GPL-3.0 源码归档）
+
+---
 
 ## 📜 版权声明与使用条款（完整版）
 
@@ -40,7 +46,7 @@ run this work, **unmodified**, inside the game "R.E.P.O." only.
 
 1.2.6 及更早版本以 **GNU GPL-3.0** 发布，其授权**不可撤销**，使用者享有以下权利：
 
-1. **运行** —— 可用于任何目的（含商业用途），作者无权禁止；
+1. **运行** —— 可用于任何目的（含商业用途）；
 2. **修改** —— 可自由修改、改编；
 3. **分发** —— **可以再分发，但必须同样以 GPL-3.0 发布衍生作品**
    （即：修改后的版本也必须开源，并附带完整 GPL-3.0 条款）；
@@ -48,9 +54,8 @@ run this work, **unmodified**, inside the game "R.E.P.O." only.
    （本仓库即为其源码来源：`MorePlayersSimple-1.2.6-archive`）。
 
 分发时须保留**版权声明与 GPL-3.0 许可文本**（GPL-3.0 §5）；除此之外，本条款**不额外附加任何限制**。
-**作者强烈希望**（但不作强制要求）在再分发时一并注明出处，便于溯源与反馈。
 
-### 四、未经书面许可明确禁止（1.2.7 及之后）
+### 四、未经许可明确禁止（1.2.7 及之后）
 
 1. **反编译、反汇编、逆向工程、脱壳、内存转储**，或以任何方式**提取实现逻辑**；
 2. **复制、改编、翻译、演绎**，或基于本作品创作衍生作品（含“换皮改名”后发布）；
@@ -91,15 +96,15 @@ run this work, **unmodified**, inside the game "R.E.P.O." only.
 - 将本模组加入**整合包（modpack）**，或以任何非“原样运行”的方式使用；
 - 任何形式的**商业用途**（含直播平台付费内容、代装服务、付费整合）。
 
-如需以上授权，请**联系作者申请**；**获准后仍须标明出处**，且授权仅对**书面同意的范围**有效。
+如需以上授权，请**联系作者申请**；**获准后仍须标明出处**
 
 ### 八、条款变更、可分性与准据法
 
 1. 作者**保留随时更新本条款的权利**；更新后的条款自发布之日起适用于**新版本**，
    已发布版本的授权不因条款更新而回溯改变。
 2. 本条款任一条款被认定无效或不可执行，**不影响其余条款的效力**。
-3. 本条款的解释与争议适用**中华人民共和国法律**（法律另有强制规定的除外）。
-
+3. 本条款的解释与争议适用**中华人民共和国法律**   **伯尔尼保护文学和艺术作品公约**。
+ 
 ### 九、免责声明
 
 本模组按“现状”提供，不附带任何明示或暗示的担保（含适销性、特定用途适用性）。
@@ -143,10 +148,15 @@ libraries (BepInEx, Harmony, Photon libraries), each under its own licence.
 | **1.2.6 and earlier** | **GNU GPL-3.0** (source: archive repository) | Use, modify, distribute under GPL-3.0 |
 | **1.2.7 and later** | **Closed source** | Run **unmodified** inside "R.E.P.O." only |
 
-### 3. Attribution required (all versions)
+### 3. Attribution
 
-**For every version you must credit the author (cn_xc) and the source.** Removing,
+**Closed-source versions (1.2.7+):** you **must** credit the author (**cn_xc**) and
+the source wherever the work is distributed, integrated or referenced. Removing,
 obscuring or altering copyright notices or author information is a licence violation.
+
+**GPL versions (1.2.6 and earlier):** keep the copyright and licence notices as
+required by **GPL-3.0 §5** — this notice adds no further restrictions. Crediting the
+source is strongly requested, but not required.
 
 ### 4. Prohibited without prior written permission (1.2.7+)
 
@@ -157,7 +167,10 @@ publishing on third-party platforms or any commercial use; removing or altering
 this notice; calling internal implementations via reflection/hooks/patching to
 build substitutes or commercial products.
 
-### 5. Artificial intelligence restrictions — important
+### 5. Artificial intelligence restrictions (1.2.7 and later only) — important
+
+These restrictions apply **only to 1.2.7 and later (closed source)**; versions 1.2.6
+and earlier are governed solely by the GPL.
 
 Without prior written permission you may **NOT**:
 
@@ -204,17 +217,14 @@ Protected as a literary work under the **Berne Convention** and **TRIPS Agreemen
 Article 10**, and under the **Copyright Law of the PRC** and **Regulations on
 Computer Software Protection**. Remedies include injunctive relief, removal of
 infringing copies and damages; wilful commercial infringement may carry criminal
-liability under **Article 217 of the Criminal Law of the PRC**. For versions
-1.2.6 and earlier released under GPL-3.0, the GPL governs and is irrevocable.
+liability under **Article 217 of the Criminal Law of the PRC**.
 
----
-
-## 📦 本仓库是什么
-
-- 这是 **MorePlayersSimple 1.2.6 及更早版本**的源代码归档，许可证为 **GNU GPL-3.0**。
-- **不包含** 1.2.7 及之后版本的源码（那些版本为闭源发布）。
-- 本仓库**不再更新**，仅作历史存档与技术参考。
-- 主仓库（1.2.7+ 开发主线）：`https://github.com/stevenlou2006-source/MorePlayersSimple`（私有）
+> **Note**: this notice does not exclude rights granted by mandatory law — e.g.
+> **Article 17 of the Regulations on Computer Software Protection of the PRC**
+> permits necessary copying for studying the ideas and principles of a program, and
+> **EU Directive 2009/24/EC, Article 6** permits limited decompilation for
+> interoperability. For **1.2.6 and earlier (GPL-3.0)** the GPL governs and is
+> irrevocable; the prohibitions above do not apply to those versions.
 
 ---
 
@@ -256,7 +266,16 @@ liability under **Article 217 of the Criminal Law of the PRC**. For versions
 > 超出的玩家会出现「能进游戏但没声音」，反而更难排查，所以选择如实说明。
 
 
-## 🆕 本版（1.2.6）更新要点
+## 🆕 本版（1.2.7）更新要点
+
+### 许可变更
+- **自 1.2.7 起，本模组改为闭源发布**（不再提供源代码）。
+  仅授权在 R.E.P.O. 中以**未经修改**的形式运行；禁止反编译、复制改编、
+  二次打包与重新分发、商业使用。
+- 需要**查看代码细节**或**加入整合包**，请先联系作者申请授权，获准后请**标明出处**。
+- **闭源版本（1.2.7+）必须注明作者（cn_xc）与出处**；GPL 版本（1.2.6−）依 GPL-3.0 保留版权声明即可（不额外附加限制）。
+- 1.2.6 及更早版本仍为 GNU GPL-3.0，源码见归档仓库：
+  `https://github.com/stevenlou2006-source/MorePlayersSimple-1.2.6-archive`
 
 1. **修复新版游戏下「Steam 大厅人数上限」设置失效**：
    新版 Facepunch 把 `Lobby.MaxMembers` 从字段改成了属性，旧写法取不到 → 设置被静默跳过。
@@ -269,20 +288,8 @@ liability under **Article 217 of the Criminal Law of the PRC**. For versions
 
 ---
 
-> **v1.2.6**：适配 2026-10-29 游戏大更新 ——
-> ① 引擎从 Unity 2022.3 升到 **Unity 6（6000.3.17f1）**，本模组已用新版程序集重新编译；
-> ② Steam 大厅逻辑从 `SteamManager` 迁移到 `SteamLobbyManager`，本模组的 `HostLobby` 补丁已跟着改。
->
-> ⚠️ 同时期其它未适配 Unity 6 的模组（尤其 REPOLib 及依赖它的模组）会加载失败或报错，与本模组无关。
-
 > ⚠️ **兼容性说明**：本版本使用 **Unity 6（6000.3.17f1）** 的游戏程序集编译，
 > **仅支持 2026-10-29 之后的游戏版本**。若你的游戏仍是 Unity 2022 版本，请使用更早的模组版本（v1.2.3）。
-# More Players Simple
-# 更多玩家精简版
-
-突破 REPO 公共房间默认 6 人联机上限，支持 1-20 人自定义。
-
-版本：1.2.6
 
 ## ⚠️ 重要说明
 
@@ -330,58 +337,3 @@ A：不支持。房间创建后上限无法更改，需重新开房。
 
 ## 问题交流
 QQ群：573485890
-
-源码与问题反馈：[GitHub](https://github.com/stevenlou2006-source/MorePlayersSimple)
-
-## 致谢
-- 灵感来源：**MorePlayersImproved**、**RoboUnion**，以及 **Zichen** 的 *LateJoinNow* 在“中途加入”上的实践。
-  （本项目**未使用**上述项目的代码，与它们**无代码或授权关系**。）
----
-
-## 许可证
-
-- **本仓库中的代码（对应 1.2.6 及更早版本）**：以 **GNU General Public License v3.0** 发布，
-  完整条款见本仓库根目录 [LICENSE](LICENSE)。
-- **1.2.7 及之后版本**：**闭源**，不再提供源代码；仅授权在 R.E.P.O. 内以未修改形式运行。
-- 详细条款（含「即使是 GPL-3.0 也必须注明出处」）见上方 **📜 版权声明与使用条款**。
-
-Copyright (C) 2026 cn_xc. All rights reserved. / 版权所有，保留一切权利。
-
-## ⚠️ 关于私人房间（默认 6 人，最高可调到 10）
-
-私人房间的上限由本模组提升到 **10 人**（配置项 `MaxPlayersPrivate`，可调 1~20），
-但**不保证第 6 人之后可以稳定加入**。原因如下：
-
-- 游戏原版的私人房上限是 **6 人**，超过 6 人后，一部分原版流程
-  （队伍槽位、房间列表人数显示、加入校验）仍按 6 人的逻辑处理；
-- 因此可能出现「能看到大厅但进不去」「加入被拒」或「人数显示不对」等情况；
-- 这是游戏本身的限制，不是本模组能完全绕开的。
-
-**如果你需要一个稳定的大房间，建议：**
-
-1. 使用**公开房**（上限 20 人），本模组对公开房的支持最完整；
-2. 想限制只有好友能进，可以再配合「房间锁定 / 中途加入」类模组实现，而不是靠私人房；
-3. 私人房建议仍控制在 **6 人以内**，超过时请自行测试确认可用性。
-
-## 🎧 关于多人语音（重要）
-
-本模组会把**语音房间**的人数上限一并提高到和主房间相同（公开 20 / 私人 10），
-但**游戏自身的语音混音逻辑是按 6 人设计的**，人数越多越容易出现以下情况：
-
-- 部分玩家**听不到**某个人说话，或只有单向能听见；
-- 音量忽大忽小、串音、回声；
-- 个别玩家掉线重连后语音不再恢复。
-
-**这些属于游戏语音系统的承载限制，不是本模组能完全解决的。**
-
-### 建议
-
-| 场景 | 建议 |
-|---|---|
-| 主要靠游戏内语音沟通 | 控制在 **6~8 人**，超过时体验会明显变差 |
-| 人数较多（10~20 人）| 改用 **Discord / KOOK / YY** 等外部语音，游戏内语音可关闭 |
-| 语音异常排查 | 让对方**退出重进**一次，通常可恢复；仍不行则减少人数 |
-
-> 我们没有做「限制语音人数」的功能：如果语音房间上限比主房间小，
-> 超出的玩家会出现「能进游戏但没声音」，反而更难排查，所以选择如实说明。
-
